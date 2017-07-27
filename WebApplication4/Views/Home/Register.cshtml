@@ -1,0 +1,68 @@
+﻿
+@{
+    ViewBag.Title = "Register";
+}
+
+<style>
+
+    body {
+   
+        background-image: url('../../Content/images.duckduckgo.com.jpg');
+        background-repeat: no-repeat;
+    }
+    
+    
+    
+    
+</style>
+
+<body>
+  <div align="center">
+    
+      <form style="width:200px" class="text-center" name="Reg" onsubmit="return userValid()" action="Summary" method="get">
+          <fieldset>
+              <legend> User Registration </legend>
+              First Name:<br>
+              <input type="text" name="FirstName">
+              <br><em>Email:</em><br>
+              <input type="email" name="Email">
+              <br>
+              Are you a Male, Female, or... Something Else?<br>
+              <input type="radio" name="gender" value="Male" checked Male /> Male<br />
+              <input type="radio" name="gender" value="Female" /> Female<br />
+              <input type="radio" name="gender" value="Something Else(!)" /> Something Else <br />
+              <br /><br />
+              <p><em>Phone Number:</em></p>
+              <input type="tel" name="Phone" pattern = "^\d{3}-\d{3}-\d{4}$" required />
+              <br />
+
+              Ever Drank Bailey's outta a shoe?
+              <select>
+                  <option value="yeh">Of course!</option>
+                  <option value="nah">Are you nuts?</option>
+
+              </select>
+              Username: <input type="text" id="Username" name="user" /><br />
+              Password: <input type="password" id="thePass" name="me" /> <br />
+
+              <input type="submit" value="Submit" />
+
+              <script type="text/javascript">
+                  function userValid() {
+
+                      var x = document.forms["Reg"]["FirstName"].value;
+                      if (x == "") {
+                          alert("Name must be filled out");
+                          return false;
+                          //haah this works!!!
+                      }
+                      //lets add a password field
+                  }
+    //write JavaScript code here
+
+              </script>
+          </fieldset>
+      </form>
+        </div>
+   
+</body>
